@@ -247,20 +247,27 @@
     Coded by <a href="#">Your Name Here</a>.
   </footer>
 
+ <span class="overlayer"></span>
 
   <script>
-    let SidebarE1 = document.getElementById('sidebar');
+  let SidebarE1 = document.getElementById('sidebar');
     let togglebtnimg = document.getElementById('toggle-btn')
+     let overlayE1 = document.querySelector('.overlayer'); 
 
     function togglebtn(){
      SidebarE1.classList.toggle('slide-in');
+     overlayE1.classList.toggle('is-active');
      if(togglebtnimg.src.includes('assets/images/icon-menu.svg')){
       togglebtnimg.src ='assets/images/icon-close.svg'
      }
      else{
       togglebtnimg.src = 'assets/images/icon-menu.svg'
      }
-    }
-  </script>
+      }
+    overlayE1.addEventListener('click', () => {
+  if (SidebarE1.classList.contains('slide-in')) {
+    togglebtn();
+  }
+  });
 </body>
 </html>
