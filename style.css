@@ -552,7 +552,7 @@
         visibility: visible;
       }
 
-     /*-------------Making it a responsive for mobile devices------------------*/
+     /*-------------Making it responsive for mobile devices------------------*/
      @media screen and (max-width:500px) {
 
       main{
